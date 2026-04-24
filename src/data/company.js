@@ -90,7 +90,7 @@ export const services = [
     title: "CCTV , Access Control , Maintananqce Procurement & Monitoring Systems",
     icon: "📷",
     color: "#1a3a5c",
-    description: "Advanced CCTV surveillance for real-time monitoring with customized security solutions for all site types.",
+    description: "Securing and monitoring your premises with advanced CCTV, access control, and smart procurement systems for seamless oversight and protection.",
     details: [
       "Advanced CCTV surveillance for real-time monitoring",
       "High-quality security fencing for strength and durability",
@@ -107,7 +107,7 @@ export const services = [
     title: "Site Safety & Fire Fighting Equipment",
     icon: "🔐",
     color: "#155f6e",
-    description: "Integrated access control and monitoring systems providing complete perimeter security and unauthorized access prevention.",
+    description: "Safeguarding lives and assets with industry-grade fire fighting equipment and comprehensive site safety solutions.",
     details: [
       "Construction site safety equipment for harzar-free operations",
       "Certified fire safety systems(extinguisher, alarms & protection systems)",
@@ -140,7 +140,7 @@ export const services = [
     title: "Smart Infrastructure",
     icon: "🏗️",
     color: "#155f6e",
-    description: "Complete one-stop material solution with cement, steel, PVC pipes, tiles and competitive pricing for all project types.",
+    description: "Building intelligent systems that connect technology and infrastructure for smarter, more efficient operations.",
     details: [
       "Technology-enabled civil construction with ICT, power & monitoring integration",
       "RFID-based access & mobility systems with ANPR, RFID & real-time reporting",

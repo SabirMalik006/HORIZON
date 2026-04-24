@@ -3,13 +3,13 @@ import { services } from '../data/company';
 
 const serviceImages = {
   telecom:      '/1.jpeg',
-  tower:        '/2.jpeg',
-  fiber:        '/3.jpeg',
-  fibernetwork: '/4.jpeg',
-  cctv:         '/5.jpeg',
-  access:       '/6.jpeg',
-  procurement:  '/7.jpeg',
-  construction: '/8.jpeg',
+  tower:        '/10.jpeg',
+  fiber:        '/2.jpeg',
+  fibernetwork: '/5.jpeg',
+  cctv:         '/3.jpeg',
+  access:       '/9.jpeg',
+  procurement:  '/8.jpeg',
+  construction: '/4.jpeg',
 };
 
 export default function Services() {
@@ -86,7 +86,7 @@ export default function Services() {
                   <ul className="mt-5 space-y-2 border-t border-gray-100 pt-5 w-full text-left">
                     {service.details.map((d, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#c9a84c] flex-shrink-0"></span>
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#000] flex-shrink-0"></span>
                         {d}
                       </li>
                     ))}

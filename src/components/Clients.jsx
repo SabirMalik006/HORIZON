@@ -33,7 +33,7 @@ export default function Clients() {
           </div>
 
           {/* Clients Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 sm:mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 sm:mb-24 text-center">
             {clients.map((client, idx) => (
               <div
                 key={client.name}
@@ -69,18 +69,18 @@ export default function Clients() {
               </h3>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 text-center">
               {certifications.map((cert, idx) => (
                 <div
                   key={cert.no}
-                  className="group relative bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:border-[#1d7a8a]/40 hover:scale-105 transition-all duration-300"
+                  className="group relative bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center hover:border-[#1d7a8a]/40 hover:scale-105 transition-all duration-300"
                 >
                   <div className="absolute -top-2 -right-2 sm:-top-3 sm:-right-3 w-8 h-8 sm:w-12 sm:h-12 bg-[#c9a84c]/10 rounded-full flex items-center justify-center">
                     <span className="text-[#c9a84c] text-[10px] sm:text-xs font-bold">{cert.no}</span>
                   </div>
                   <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">{cert.icon}</div>
                   <p className="text-white/70 sm:text-white/80 text-xs sm:text-sm leading-relaxed">{cert.title}</p>
-                  <div className="mt-3 sm:mt-4 h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#1d7a8a] to-[#c9a84c] transition-all duration-500"></div>
+                  <div className="mt-3 sm:mt-4 h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#1d7a8a] to-[#c9a84c] transition-all duration-500 mx-auto"></div>
                 </div>
               ))}
             </div>
@@ -96,28 +96,26 @@ export default function Clients() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Header - Responsive */}
-          <div className="mb-12 sm:mb-16 text-center lg:text-left lg:flex lg:justify-between lg:items-end">
-            <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 bg-[#1d7a8a]/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-4">
-                <FiShield className="text-[#1d7a8a] text-xs sm:text-sm" />
-                <p className="text-[#1d7a8a] text-[10px] sm:text-xs font-semibold tracking-wider uppercase">Why Horizon</p>
-              </div>
-              <h2
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0e2540] mb-3 sm:mb-4 px-2 lg:px-0"
-                style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
-              >
-                WHY CHOOSE <br className="block sm:hidden" />
-                <span className="text-[#1d7a8a]">HORIZON?</span>
-              </h2>
-              <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-[#1d7a8a] to-[#c9a84c] rounded-full mx-auto lg:mx-0"></div>
+          <div className="mb-12 sm:mb-16 text-center">
+            <div className="inline-flex items-center gap-2 bg-[#1d7a8a]/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-4">
+              <FiShield className="text-[#1d7a8a] text-xs sm:text-sm" />
+              <p className="text-[#1d7a8a] text-[10px] sm:text-xs font-semibold tracking-wider uppercase">Why Horizon</p>
             </div>
-            <p className="text-gray-500 text-sm sm:text-base max-w-md mt-6 lg:mt-0 mx-auto lg:mx-0 px-4 lg:px-0">
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0e2540] mb-3 sm:mb-4 px-2"
+              style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
+            >
+              WHY CHOOSE <br className="block sm:hidden" />
+              <span className="text-[#1d7a8a]">HORIZON?</span>
+            </h2>
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-[#1d7a8a] to-[#c9a84c] rounded-full mx-auto"></div>
+            <p className="text-gray-500 text-sm sm:text-base max-w-md mt-6 mx-auto px-4">
               Setting new standards in industrial solutions with excellence and innovation
             </p>
           </div>
 
           {/* Why Choose Grid - Responsive */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 sm:gap-6 lg:gap-8 text-center sm:text-left">
             {whyChoose.map((item, i) => (
               <div
                 key={item.no}
@@ -134,7 +132,7 @@ export default function Clients() {
                 </div>
 
                 {/* Icon */}
-                <div className="mt-6 sm:mt-8 mb-4 sm:mb-6">
+                <div className="mt-6 sm:mt-8 mb-4 sm:mb-6 flex justify-center sm:justify-start">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-[#1d7a8a]/10 to-[#c9a84c]/10 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                     {i === 0 && <FiTrendingUp className="text-xl sm:text-2xl text-[#1d7a8a]" />}
                     {i === 1 && <FiGlobe className="text-xl sm:text-2xl text-[#1d7a8a]" />}
@@ -144,7 +142,7 @@ export default function Clients() {
                   </div>
                 </div>
 
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-medium">
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed font-medium text-center sm:text-left">
                   {item.text}
                 </p>
 
@@ -155,8 +153,8 @@ export default function Clients() {
           </div>
 
           {/* Stats Section - Fully Responsive */}
-          <div className="mt-12 sm:mt-16 md:mt-20 text-center">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 bg-gray-50 rounded-2xl sm:rounded-full px-6 sm:px-8 md:px-12 py-6 sm:py-4">
+          <div className="mt-12 sm:mt-16 md:mt-20">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 bg-gray-50 rounded-2xl sm:rounded-full px-6 sm:px-8 md:px-12 py-6 sm:py-4 text-center">
               {/* Stat 1 */}
               <div className="text-center w-full sm:w-auto">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0e2540]">500+</div>

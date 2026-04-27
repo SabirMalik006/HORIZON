@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="mb-12 md:mb-16 text-center md:text-left">
+        <div className="mb-12 md:mb-16 text-center">
           <p className="text-[#1d7a8a] text-xs sm:text-sm font-semibold tracking-widest uppercase mb-3">
             Who We Are
           </p>
@@ -16,7 +16,7 @@ export default function About() {
           >
             ABOUT US
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#1d7a8a] to-[#c9a84c] mx-auto md:mx-0"></div>
+          <div className="w-16 h-1 bg-gradient-to-r from-[#1d7a8a] to-[#c9a84c] mx-auto"></div>
         </div>
 
         {/* About Content - Grid */}
@@ -50,34 +50,34 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right Column - Mission & Vision */}
-          <div className="space-y-5 md:space-y-6">
+          {/* Right Column - Mission & Vision with equal height */}
+          <div className="grid grid-cols-1 gap-5 md:gap-6 h-full">
             {/* Mission */}
-            <div className="border-l-4 border-[#1a3a5c] pl-4 sm:pl-6 py-2">
+            <div className="border-l-4 border-[#1a3a5c] pl-4 sm:pl-6 py-2 h-full flex flex-col">
               <div className="flex items-center gap-2 mb-2 md:mb-3">
                 <span className="text-xl sm:text-2xl">🎯</span>
                 <h3 
-                  className="text-lg sm:text-xl font-bold text-[#0e2540]" 
+                  className="text-lg sm:text-2xl font-bold text-[#0e2540]" 
                   style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
                 >
                   OUR MISSION
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{mission}</p>
+              <p className="text-gray-600 text-sm sm:text-lg leading-relaxed">{mission}</p>
             </div>
 
             {/* Vision */}
-            <div className="border-l-4 border-[#c9a84c] pl-4 sm:pl-6 py-2">
+            <div className="border-l-4 border-[#c9a84c] pl-4 sm:pl-6 py-2 h-full flex flex-col">
               <div className="flex items-center gap-2 mb-2 md:mb-3">
                 <span className="text-xl sm:text-2xl">👁️</span>
                 <h3 
-                  className="text-lg sm:text-xl font-bold text-[#0e2540]" 
+                  className="text-lg sm:text-2xl font-bold text-[#0e2540]" 
                   style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
                 >
                   OUR VISION
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{vision}</p>
+              <p className="text-gray-600 text-sm sm:text-lg leading-relaxed">{vision}</p>
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function About() {
               return (
                 <div
                   key={s.title}
-                  className="group relative overflow-hidden p-6 sm:p-8 flex flex-col items-center text-center transition-all duration-500 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                  className="group relative overflow-hidden p-6 sm:p-8 flex flex-col items-center text-center transition-all duration-500 rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 h-full"
                   style={{
                     background: isDark
                       ? 'linear-gradient(145deg, #0e2540, #1a3a5c)'

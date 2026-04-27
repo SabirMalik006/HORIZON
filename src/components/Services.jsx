@@ -1,19 +1,37 @@
-import { useState } from 'react';
-import { services } from '../data/company';
-
-const serviceImages = {
-  telecom:      '/1.jpeg',
-  tower:        '/10.jpeg',
-  fiber:        '/2.jpeg',
-  fibernetwork: '/5.jpeg',
-  cctv:         '/3.jpeg',
-  access:       '/9.jpeg',
-  procurement:  '/8.jpeg',
-  construction: '/4.jpeg',
-};
+import { useState, useEffect } from 'react';
+import { API_URL } from '../api/config';
 
 export default function Services() {
   const [active, setActive] = useState(null);
+  const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchServices();
+  }, []);
+
+  const fetchServices = async () => {
+    try {
+      const response = await fetch(`${API_URL}/services`);
+      const data = await response.json();
+      setServices(data);
+    } catch (err) {
+      console.error('Error fetching services:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <section id="services" className="py-24 bg-[#f0f4f8]">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#c9a84c] mx-auto"></div>
+          <p className="mt-4 text-gray-500">Loading services...</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="services" className="py-24 bg-[#f0f4f8]">
@@ -42,34 +60,21 @@ export default function Services() {
               {/* Image */}
               <div className="relative h-44 overflow-hidden">
                 <img
-                  src={serviceImages[service.id]}
+                  src={service.image.startsWith('http') ? service.image : `http://localhost:5000${service.image}`}
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  onError={(e) => { e.target.src = '/placeholder.jpg'; }}
                 />
-                {/* Dark overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#061220]/80 via-[#061220]/30 to-transparent"></div>
               </div>
 
               {/* Card Body */}
               <div className="flex flex-col items-center text-center px-6 pt-6 pb-6 flex-1">
-
-                {/* Gold line */}
                 <div className="w-8 h-0.5 mb-4 group-hover:w-14 transition-all duration-300 bg-[#c9a84c]"></div>
-
-                {/* Title */}
-                <h3
-                  className="font-bold text-[#0e2540] text-lg leading-tight mb-3"
-                  style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
-                >
+                <h3 className="font-bold text-[#0e2540] text-lg leading-tight mb-3" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
                   {service.title.toUpperCase()}
                 </h3>
-
-                {/* Description */}
-                <p className="text-gray-500 text-sm leading-relaxed mb-5">
-                  {service.description}
-                </p>
-
-                {/* Toggle Button */}
+                <p className="text-gray-500 text-sm leading-relaxed mb-5">{service.description}</p>
                 <button
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase border transition-all duration-300"
                   style={{
@@ -81,7 +86,6 @@ export default function Services() {
                   {active === service.id ? '▲ Show Less' : '▼ View Details'}
                 </button>
 
-                {/* Expandable Details */}
                 {active === service.id && (
                   <ul className="mt-5 space-y-2 border-t border-gray-100 pt-5 w-full text-left">
                     {service.details.map((d, j) => (

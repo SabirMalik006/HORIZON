@@ -64,7 +64,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12 ">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-1 h-full">
               <h3 className="text-2xl font-bold text-white mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>Get in Touch</h3>
               <div className="space-y-5">
                 <div className="flex items-start gap-4">

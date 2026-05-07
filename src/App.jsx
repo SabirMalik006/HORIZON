@@ -10,6 +10,7 @@ import Services from './components/Services';
 import Clients from './components/Clients';
 import Team from './components/Team';
 import Contact from './components/Contact';
+import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -25,6 +26,7 @@ function App() {
               <Hero />
               <About />
               <Services />
+              <Gallery />
               <Clients />
               <Team />
               <Contact />

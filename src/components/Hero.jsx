@@ -1,4 +1,30 @@
+const heroCTALinks = [
+  { label: 'Our Services', href: 'services' },
+  { label: 'Get In Touch', href: 'contact' },
+];
+
 export default function Hero() {
+  // Smooth scroll function
+  const smoothScrollTo = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Handle CTA button click
+  const handleCTAClick = (e, sectionId) => {
+    e.preventDefault();
+    smoothScrollTo(sectionId);
+  };
+
   return (
     <section
       id="home"
@@ -53,18 +79,20 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-2 sm:gap-4 mb-16 animate-fade-up delay-400">
-            <a
-              href="#services"
-              className="px-4 sm:px-8 py-2 sm:py-4 bg-[#c9a84c] text-[#061220] font-bold text-xs sm:text-sm tracking-wide rounded hover:bg-[#f0d080] transition-all hover:scale-105"
-            >
-              Our Services
-            </a>
-            <a
-              href="#contact"
-              className="px-4 sm:px-8 py-2 sm:py-4 border border-white/20 text-white font-medium text-xs sm:text-sm tracking-wide rounded hover:border-[#c9a84c] hover:text-[#c9a84c] transition-all"
-            >
-              Get In Touch
-            </a>
+            {heroCTALinks.map(link => (
+              <a
+                key={link.label}
+                href={`#${link.href}`}
+                onClick={(e) => handleCTAClick(e, link.href)}
+                className={`px-4 sm:px-8 py-2 sm:py-4 font-bold text-xs sm:text-sm tracking-wide rounded transition-all hover:scale-105 ${
+                  link.href === 'services'
+                    ? 'bg-[#c9a84c] text-[#061220] hover:bg-[#f0d080]'
+                    : 'border border-white/20 text-white hover:border-[#c9a84c] hover:text-[#c9a84c]'
+                }`}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
           {/* Stats */}

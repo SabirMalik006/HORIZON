@@ -172,7 +172,7 @@ export const certifications = [
 ];
 
 export const whyChoose = [
-  { no: "01", text: "Over 20 years of proven experience" },
+  { no: "01", text: "Over 20+ years of proven experience" },
   { no: "02", text: "Contractors for Pakistan Army, FWO, SCO, PTCL, DHA & Commercial Organisations" },
   { no: "03", text: "Capable of handling complex civil and infrastructure projects" },
   { no: "04", text: "Commitment to safety, quality, and timely delivery" },

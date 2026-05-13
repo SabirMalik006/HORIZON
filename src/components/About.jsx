@@ -30,7 +30,7 @@ export default function About() {
             {/* Info Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {[
-                { label: 'Founded', value: '20+ Years Ago' },
+                { label: 'Experience', value: '20+ Years Ago' },
                 { label: 'Headquarters', value: 'Islamabad, Pakistan' },
                 { label: 'Sector', value: 'Public & Private' },
                 { label: 'Expertise', value: 'Telecom & Security' },

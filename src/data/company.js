@@ -1,7 +1,7 @@
 export const companyInfo = {
   name: "Horizon Integrated Solutions",
   tagline: "Infrastructure. Technology. Excellence.",
-  about: "Horizon Integrated Solutions delivers complete infrastructure, technology, and procurement services. Specializing in telecom, security systems, CCTV, fencing, equipment supply, and tower construction, we provide reliable, cost-effective solutions with seamless execution. Committed to quality and efficiency, we support both public and private sector projects with excellence.",
+  about: "Horizon Integrated Solutions delivers Compete infrastructure development, civil works, maintainance, customised solutions and procurement services and procurement services. Telecom towers fabrication , security systems, CCTV, conference audio and video systems, fencing, equipment supply And tower maintainance , we provide reliable, cost-effective solutions with seamless execution. Committed to quality and efficiency, we support both public and private sector projects with excellence.",
   address: "Icon 2, Business Square, Gulberg Greens, Islamabad",
   phone: "+92 321-5366666",
   email: "info@horizonintegratedsolutions.com",
@@ -172,7 +172,7 @@ export const certifications = [
 ];
 
 export const whyChoose = [
-  { no: "01", text: "Over 30 years of proven experience" },
+  { no: "01", text: "Over 20 years of proven experience" },
   { no: "02", text: "Contractors for Pakistan Army, FWO, SCO, PTCL, DHA & Commercial Organisations" },
   { no: "03", text: "Capable of handling complex civil and infrastructure projects" },
   { no: "04", text: "Commitment to safety, quality, and timely delivery" },

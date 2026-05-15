@@ -22,27 +22,30 @@ export default function About() {
         {/* About Content - Grid */}
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 mb-16 md:mb-20">
           {/* Left Column */}
-          <div>
-            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6 md:mb-8">
+          <div className="flex flex-col h-full">
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6 md:mb-8 flex-grow">
               {companyInfo.about}
             </p>
             
             {/* Info Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {[
-                { label: 'Experience', value: '20+ Years Ago' },
-                { label: 'Headquarters', value: 'Islamabad, Pakistan' },
-                { label: 'Sector', value: 'Public & Private' },
-                { label: 'Expertise', value: 'Telecom & Security' },
+                { label: 'Experience', value: '20+ Years Ago', icon: '📈' },
+                { label: 'Headquarters', value: 'Islamabad, Pakistan', icon: '📍' },
+                { label: 'Sector', value: 'Public & Private', icon: '🏛️' },
+                { label: 'Expertise', value: 'Telecom & Security', icon: '🛡️' },
               ].map(item => (
                 <div 
                   key={item.label} 
-                  className="bg-[#f0f4f8] p-3 sm:p-4 rounded-lg hover:shadow-md transition-shadow"
+                  className="bg-[#f0f4f8] p-5 sm:p-6 rounded-2xl hover:shadow-xl transition-all duration-300 border border-gray-100 group"
                 >
-                  <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wide mb-1">
-                    {item.label}
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-xl group-hover:scale-110 transition-transform">{item.icon}</span>
+                    <div className="text-[10px] sm:text-xs text-[#1d7a8a] font-bold uppercase tracking-widest">
+                      {item.label}
+                    </div>
                   </div>
-                  <div className="font-semibold text-[#0e2540] text-sm sm:text-base">
+                  <div className="font-bold text-[#0e2540] text-base sm:text-lg leading-tight">
                     {item.value}
                   </div>
                 </div>
@@ -63,7 +66,25 @@ export default function About() {
                   OUR MISSION
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm sm:text-lg leading-relaxed">{mission}</p>
+              <p className="text-gray-600 text-sm sm:text-lg leading-relaxed flex-grow">{mission}</p>
+              
+              <div className="mt-8 pt-4 border-t border-gray-100">
+                <div className="mb-2">
+                  <p className="text-3xl sm:text-4xl text-[#0e2540]" style={{ fontFamily: "'Great Vibes', cursive" }}>
+                    <span className="relative inline-block mr-2">
+                      Ammad
+                      <span className="absolute -bottom-0.5 left-0 w-full h-[1.5px] bg-[#0e2540]/60 -rotate-1"></span>
+                    </span>
+                    <span className="relative inline-block">
+                      Khan
+                      <span className="absolute -bottom-0.5 left-0 w-full h-[1.5px] bg-[#0e2540]/60 -rotate-1"></span>
+                    </span>
+                  </p>
+                </div>
+                <p className="text-[10px] sm:text-xs font-bold text-[#1d7a8a] uppercase tracking-widest mt-1">
+                  CEO, {companyInfo.name}.
+                </p>
+              </div>
             </div>
 
             {/* Vision */}
@@ -77,7 +98,25 @@ export default function About() {
                   OUR VISION
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm sm:text-lg leading-relaxed">{vision}</p>
+              <p className="text-gray-600 text-sm sm:text-lg leading-relaxed flex-grow">{vision}</p>
+
+              <div className="mt-8 pt-4 border-t border-gray-100">
+                <div className="mb-2">
+                  <p className="text-3xl sm:text-4xl text-[#0e2540]" style={{ fontFamily: "'Great Vibes', cursive" }}>
+                    <span className="relative inline-block mr-2">
+                      Ammad
+                      <span className="absolute -bottom-0.5 left-0 w-full h-[1.5px] bg-[#0e2540]/60 -rotate-1"></span>
+                    </span>
+                    <span className="relative inline-block">
+                      Khan
+                      <span className="absolute -bottom-0.5 left-0 w-full h-[1.5px] bg-[#0e2540]/60 -rotate-1"></span>
+                    </span>
+                  </p>
+                </div>
+                <p className="text-[10px] sm:text-xs font-bold text-[#1d7a8a] uppercase tracking-widest mt-1">
+                   CEO, {companyInfo.name}.
+                </p>
+              </div>
             </div>
           </div>
         </div>

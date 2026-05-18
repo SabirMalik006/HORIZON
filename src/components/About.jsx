@@ -1,4 +1,6 @@
 import { companyInfo, mission, vision, strengths } from '../data/company';
+import signatureImg from '../assets/sign.png';
+import fontImg from '../assets/font.png';
 
 export default function About() {
   return (
@@ -69,17 +71,17 @@ export default function About() {
               <p className="text-gray-600 text-sm sm:text-lg leading-relaxed flex-grow">{mission}</p>
               
               <div className="mt-8 pt-4 border-t border-gray-100">
-                <div className="mb-2">
-                  <p className="text-3xl sm:text-4xl text-[#0e2540]" style={{ fontFamily: "'Great Vibes', cursive" }}>
-                    <span className="relative inline-block mr-2">
-                      Ammad
-                      <span className="absolute -bottom-0.5 left-0 w-full h-[1.5px] bg-[#0e2540]/60 -rotate-1"></span>
-                    </span>
-                    <span className="relative inline-block">
-                      Khan
-                      <span className="absolute -bottom-0.5 left-0 w-full h-[1.5px] bg-[#0e2540]/60 -rotate-1"></span>
-                    </span>
-                  </p>
+                <div className="mb-2 flex flex-col gap-1">
+                  <img 
+                    src={signatureImg} 
+                    alt="Ammad Khan Signature" 
+                    className="h-10 sm:h-12 md:h-14 w-auto object-contain max-w-[150px] sm:max-w-[180px] md:max-w-[200px]" 
+                  />
+                  <img 
+                    src={fontImg} 
+                    alt="Ammad Khan Name" 
+                    className="h-4 sm:h-5 md:h-6 w-auto object-contain max-w-[120px] sm:max-w-[140px] md:max-w-[165px]" 
+                  />
                 </div>
                 <p className="text-[10px] sm:text-xs font-bold text-[#1d7a8a] uppercase tracking-widest mt-1">
                   CEO, {companyInfo.name}.
@@ -101,17 +103,17 @@ export default function About() {
               <p className="text-gray-600 text-sm sm:text-lg leading-relaxed flex-grow">{vision}</p>
 
               <div className="mt-8 pt-4 border-t border-gray-100">
-                <div className="mb-2">
-                  <p className="text-3xl sm:text-4xl text-[#0e2540]" style={{ fontFamily: "'Great Vibes', cursive" }}>
-                    <span className="relative inline-block mr-2">
-                      Ammad
-                      <span className="absolute -bottom-0.5 left-0 w-full h-[1.5px] bg-[#0e2540]/60 -rotate-1"></span>
-                    </span>
-                    <span className="relative inline-block">
-                      Khan
-                      <span className="absolute -bottom-0.5 left-0 w-full h-[1.5px] bg-[#0e2540]/60 -rotate-1"></span>
-                    </span>
-                  </p>
+                <div className="mb-2 flex flex-col gap-1">
+                  <img 
+                    src={signatureImg} 
+                    alt="Ammad Khan Signature" 
+                    className="h-10 sm:h-12 md:h-14 w-auto object-contain max-w-[150px] sm:max-w-[180px] md:max-w-[200px]" 
+                  />
+                  <img 
+                    src={fontImg} 
+                    alt="Ammad Khan Name" 
+                    className="h-4 sm:h-5 md:h-6 w-auto object-contain max-w-[120px] sm:max-w-[140px] md:max-w-[165px]" 
+                  />
                 </div>
                 <p className="text-[10px] sm:text-xs font-bold text-[#1d7a8a] uppercase tracking-widest mt-1">
                    CEO, {companyInfo.name}.

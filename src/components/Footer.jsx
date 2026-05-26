@@ -31,10 +31,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4 text-sm tracking-wide uppercase">Quick Links</h4>
             <div className="space-y-2">
-              {['Home', 'About', 'Services', 'Clients', 'Contact'].map(link => (
+              {['Home', 'About', 'Services', 'Clients', 'Policy', 'Contact'].map(link => (
                 <a
                   key={link}
-                  href={`#${link.toLowerCase().replace(' ', '-')}`}
+                  href={link === 'Policy' ? '#/policy' : `#${link.toLowerCase().replace(' ', '-')}`}
                   className="block text-white/40 hover:text-[#c9a84c] text-sm transition-colors"
                 >
                   {link}

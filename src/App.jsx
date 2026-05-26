@@ -12,6 +12,7 @@ import Team from './components/Team';
 import Contact from './components/Contact';
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
+import Policy from './components/Policy';
 import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
@@ -35,6 +36,15 @@ function App() {
             </div>
           } />
           
+          <Route path="/policy" element={
+            <div className="min-h-screen">
+              <Navbar />
+              <Policy />
+              <Footer />
+              <WhatsAppButton />
+            </div>
+          } />
+
           {/* Admin Routes */}
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/dashboard" element={

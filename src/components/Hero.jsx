@@ -74,7 +74,7 @@ export default function Hero() {
 
           {/* Description */}
           <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-10 animate-fade-up delay-300">
-            Complete infrastructure, technology & procurement services — specializing in Telecom Towers, CCTV Surveillance, Perimeter Fencing, Fiber Networks , Civil Worls & construction site supplies.
+            Complete infrastructure, technology & procurement services — specializing in Telecom Towers, CCTV Surveillance, Perimeter Fencing, Fiber Networks , Civil Works & construction site supplies.
           </p>
 
           {/* CTA Buttons */}
